@@ -41,6 +41,8 @@ public class TreinamentoElementMap extends BasePage {
 	
 	protected WebElement email;
 	
+	protected WebElement email_create;
+	
 	@FindBy(id = "id_order")
 	protected WebElement order;
 	
@@ -52,4 +54,10 @@ public class TreinamentoElementMap extends BasePage {
 	@FindBy(xpath = "//*[@id='center_column']/p")
 	protected WebElement mensagemContactUs;
 	
+	@FindBy(xpath = "//*[@id=\"header\"]/div[2]/div/div/nav/div[1]/a")
+	protected WebElement menuSignIn;
+	
+	protected WebElement SubmitCreate;
+	
+	protected WebElement SubmitAccount;
 }

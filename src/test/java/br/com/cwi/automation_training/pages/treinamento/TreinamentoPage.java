@@ -29,6 +29,10 @@ public class TreinamentoPage extends TreinamentoElementMap {
 		} else if(botao.equals("Send")) {
 			actions.moveToElement(botaoSend).click().perform();
 			//botaoSend.click();
+		} else if(botao.equals("Create an account")) {
+			actions.moveToElement(SubmitCreate).click().perform();
+		} else if(botao.equals("Register")) {
+			actions.moveToElement(SubmitAccount).click().perform();
 		}
 		logPrint("Clicou no botão " + botao);
 	}
@@ -53,9 +57,12 @@ public class TreinamentoPage extends TreinamentoElementMap {
 		//WebDriverWait wait = new WebDriverWait(driver, 10);
 		//WebElement element = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"center_column\"]/h1")));
 	
-		menuContactUs.click();
+		if(nomeMenu.equals("Contact us")) {
+			menuContactUs.click();
+		} else if (nomeMenu.equals("Sign in")) {
+			menuSignIn.click();
+		}
 		logPrint("Acessou menu " + nomeMenu);
-		
 	}
 
 	public void selecionarOpcaoNoCampo(String opcao, String campo) {
@@ -73,9 +80,16 @@ public class TreinamentoPage extends TreinamentoElementMap {
 			meuCampo = order;
 		} else if (campo.equals("Message")) {
 			meuCampo = message;
+		} else if (campo.equals("Email cadastro")) {
+			meuCampo = email_create;
 		}
 		meuCampo.sendKeys(dado);
 		logPrint("Inseriu o dado " + dado + " no campo " + campo);
+	}
+
+	public void preencherTodosCamposCadastroUsuario() {
+		//campo
+		
 	}
 	
 }

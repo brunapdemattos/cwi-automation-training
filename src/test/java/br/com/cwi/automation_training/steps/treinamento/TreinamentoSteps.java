@@ -41,6 +41,12 @@ public class TreinamentoSteps {
 		treinamentoPage.selecionarOpcaoNoCampo(opcao, campo);
 	}
 	
+	@Quando("preencho todos os campos do cadastro de usuario")
+	public void preencherTodosCamposCadastroUsuario() {
+		TreinamentoPage treinamentoPage = new TreinamentoPage();
+		treinamentoPage.preencherTodosCamposCadastroUsuario();
+	}
+	
 	@E("insiro o dado \"(.*)\" no campo \"(.*)\"")
 	public void inserirDadoNoCampo(String dado, String campo) {
 		TreinamentoPage treinamentoPage = new TreinamentoPage();
